@@ -1,95 +1,222 @@
+import styles from '../public/assets/css/style.module.css'
 import Image from 'next/image'
-import styles from './page.module.css'
+import { faLaravel, faHtml5, faCss3, faWordpress, faPhp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className={styles.header}>
+        <Image
+          src="/assets/img/ititle.svg"
+          alt="Box Top"
+          width={16}
+          height={314}
+          priority
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        />
+        <div className={styles["header-title"]} data-aos="fade-right" data-aos-duration="2000">
+          <div className={styles["header-title-top"]}>
+            <h1>
+              <span className={styles["primary-color"]}>Web</span>
+              Developer
+            </h1>
+          </div>
+          <div className={styles["header-title-bottom"]}>
+            <h1>Portfolio</h1>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
+      <div className={styles["divider"]}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/assets/img/dividertop.svg"
+          alt="Divider"
+          width={200}
+          height={200}
           priority
         />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+      <section className={styles["person"]}>
+        <div className={styles["person-foto"]} data-aos="fade-down-right">
+          <Image
+            src="/assets/img/profil.png"
+            alt="Person Photo"
+            width={500}
+            height={500}
+            priority
+          />
+        </div>
+        <div className={styles["person-detail"]} data-aos="fade-down-left">
+          <h1>NANDO CARERA</h1>
+          <p className={styles["text-indent"]}>
+            I am a web developer with over one years of experience in front-end
+            and back-end development. I enjoy researching and keeping myself
+            updated with the latest web design and development technology trends
+            to ensure that the websites I develop are relevant and use best
+            practices.
           </p>
-        </a>
+          <p className={styles["text-indent"]}>
+            I have a diverse portfolio. Please explore examples of my work to see
+            my quality and expertise in developing websites.
+          </p>
+          <div className={styles["contact"]}>
+            <Image
+              src="/assets/img/mail.svg"
+              alt="Email Logo"
+              width={30}
+              height={30}
+              className={styles["contact-logo"]}
+              priority
+            />
+            <p>careracarera1@gmail.com</p>
+          </div>
+        </div>
+      </section>
+      <div className={`${styles["divider"]} ${styles["bg-third"]}`}>
+        <Image
+          src="/assets/img/dividerbottom.svg"
+          alt="Divider"
+          width={200}
+          height={200}
+          priority
+        />
       </div>
-    </main>
+      <section className={`${styles["person-desc"]} ${styles["bg-third"]}`}>
+        <div className={styles["person-detail"]}>
+          <h1>Education</h1>
+          <div className={styles["person-education"]}>
+            <h2>Universitas Brawijaya</h2>
+            <p>S1 Pendidikan Teknologi Informasi</p>
+            <h3 className={styles["primary-color"]}>2017 - 2021</h3>
+          </div>
+          <div className={styles["person-education"]}></div>
+        </div>
+        <div className={styles["person-detail"]}>
+          <h1>Skill</h1>
+          <div className={styles["person-skill"]}>
+            <div className={styles["skill-col"]}>
+              <FontAwesomeIcon icon={faLaravel} size='2x' />
+              <p>Laravel</p>
+            </div>
+            <div className={styles["skill-col"]}>
+              <FontAwesomeIcon icon={faHtml5} size='2x' />
+              <p>HTML 5</p>
+            </div>
+            <div className={styles["skill-col"]}>
+              <FontAwesomeIcon icon={faCss3} size='2x' />
+              <p>CSS 3</p>
+            </div>
+            <div className={styles["skill-col"]}>
+              <FontAwesomeIcon icon={faWordpress} size='2x' />
+              <p>Wordpress</p>
+            </div>
+            <div className={styles["skill-col"]}>
+              <FontAwesomeIcon icon={faPhp} size='2x' />
+              <p>PHP</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles["person-detail"]}>
+          <h1>Experience</h1>
+          <div className={styles["person-education"]}>
+            <h2>Axata Technology</h2>
+            <p>Full Stack Developer</p>
+            <h3 className={styles["primary-color"]}>2021 - Now</h3>
+          </div >
+        </div >
+      </section >
+      <div className={styles["divider"]}>
+        <Image
+          src="/assets/img/dividertop.svg"
+          alt="Divider"
+          width={200}
+          height={200}
+          priority
+        />
+      </div>
+      <div className={styles["product-title"]}>
+        <Image
+          src="/assets/img/producttitle.svg"
+          alt="Product Title"
+          width={200}
+          height={200}
+        />
+      </div>
+      <div className={`${styles["divider"]} ${styles["bg-third"]}`}>
+        <Image
+          src="/assets/img/dividerbottom.svg"
+          alt="Divider"
+          width={200}
+          height={200}
+          priority
+        />
+      </div>
+      <div className={styles["section-product"]}>
+        <div
+          className={styles["product-content"]}
+          data-aos="zoom-out-down"
+          data-aos-duration="1000"
+        >
+          <div className={styles["product-name"]}>
+            <h1>Product Title</h1>
+            <p>Coming Soon</p>
+          </div>
+          <div className={styles["product-image"]}></div>
+          <div className={styles["product-name"]}>
+            <h1>Product Title</h1>
+            <p>Coming Soon</p>
+          </div>
+          <div className={styles["product-image"]}></div>
+          <div className={styles["product-image"]}></div>
+          <div className={styles["product-name"]}>
+            <h1>Product Title</h1>
+            <p>Coming Soon</p>
+          </div>
+          <div className={styles["product-image"]}></div>
+          <div className={styles["product-name"]}>
+            <h1>Product Title</h1>
+            <p>Coming Soon</p>
+          </div>
+        </div>
+      </div>
+      <div className={`${styles["divider"]} ${styles["bg-third"]}`}>
+        <Image
+          src="/assets/img/dividerfooter.svg"
+          alt="Divider"
+          width={200}
+          height={200}
+          priority
+        />
+      </div>
+      <footer>
+        <div className={styles["footer-message"]} data-aos="fade-left">
+          <h1>thank you</h1>
+        </div>
+        <div className={styles["social"]} data-aos="fade-left">
+          <div className={styles["social-detail"]}>
+            <Image
+              src="/assets/img/instagram.svg"
+              alt="Instagram Logo"
+              className={styles["contact-logo"]}
+              width={40}
+              height={30}
+            />
+            <p>@nandocarera_</p>
+            <h1>|</h1>
+          </div>
+          <div className={styles["social-detail"]}>
+            <Image
+              src="/assets/img/mail.svg"
+              alt="Mail Logo"
+              className={styles["contact-logo"]}
+              width={40}
+              height={30}
+            />
+            <p>careracarera1@gmail.com</p>
+          </div>
+        </div>
+      </footer>
+    </>
   )
 }
