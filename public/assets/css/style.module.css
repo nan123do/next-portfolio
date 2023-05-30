@@ -35,7 +35,6 @@
   right: 111px;
   align-content: center;
   animation: 3s infinite alternate slidein;
-  
 }
 
 .header-title-top {
@@ -265,6 +264,7 @@ section.person-desc .person-skill {
 
 .social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social-detail {
@@ -274,7 +274,7 @@ section.person-desc .person-skill {
 
 .social-detail img {
   height: 30px;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 .social-detail p {
@@ -320,5 +320,129 @@ section.person-desc .person-skill {
 
   .product-content {
     padding: 20px 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    height: 300px;
+    max-width: 550px;
+    background-image: url(/assets/img/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header img {
+    width: 56px;
+    height: 150px;
+    position: absolute;
+    right: 52px;
+    top: 0;
+  }
+
+  .header-title {
+    position: absolute;
+    margin-top: 130px;
+    right: 30px;
+  }
+
+  .header-title-top h1 {
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 20px;
+    padding-left: 1px;
+  }
+
+  .header-title-bottom h1 {
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 50px;
+  }
+
+  .divider {
+    height: 20px;
+  }
+
+  section.person {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  section.person .person-foto {
+    width: 350px;
+  }
+
+  .person-detail {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .person-detail h1{
+    font-size: 35px;
+  }
+
+  .person-detail p{
+    font-size: 15px;
+  }
+
+  section.person-desc {
+    padding: 20px 50px;
+  }
+
+  section.person-desc .person-detail {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .skill-col {
+    width: 80px;
+  }
+
+  .skill-col p {
+    font-size: 15px;
+    font-family: var(--poppins);
+    margin: 10px 0;
+  }
+
+  .skill-col i {
+    font-size: 30px;
+  }
+
+  .product-title {
+    height: 200px;
+  }
+
+  .product-title img {
+    height: 70px;
+  }
+
+  .product-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+  }
+
+  .product-name h1 {
+    font-size: 20px;
+  }
+
+  .product-content {
+    padding: 20px 50px;
+  }
+
+  .footer-message h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .social-detail img {
+    height: 30px;
+  }
+  
+  .social-detail p {
+    font-size: 20px;
   }
 }

@@ -19,7 +19,7 @@ export default function Home() {
         <div className={styles["header-title"]} data-aos="fade-right" data-aos-duration="2000">
           <div className={styles["header-title-top"]}>
             <h1>
-              <span className={styles["primary-color"]}>Web</span>
+              <span className={styles["primary-color"]}>Web {' '}</span>
               Developer
             </h1>
           </div>
